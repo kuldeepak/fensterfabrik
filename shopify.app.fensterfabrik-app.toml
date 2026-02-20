@@ -1,0 +1,24 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "78829fdbaebb746c403acdc9ae52268d"
+name = "Fensterfabrik-app"
+application_url = "https://networking-sox-vendor-encouraged.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2026-04"
+
+[app_proxy]
+url = "https://networking-sox-vendor-encouraged.trycloudflare.com/cartApi"
+subpath = "cartApi"
+prefix = "apps"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products , write_files , write_app_proxy , read_publications , read_locations , write_inventory , read_inventory , write_publications"
+
+[auth]
+redirect_urls = [ "https://networking-sox-vendor-encouraged.trycloudflare.com/api/auth" ]
